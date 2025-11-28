@@ -1,6 +1,6 @@
 ---
 title: "Ejercicios de modelos lineales"
-author: "Spiousas - Casiraghi - Drucaroff"
+author: "Spiousas"
 date: "`r Sys.Date()`"
 vignette: "%\\VignetteIndexEntry{Vignette Title} %\\VignetteEngine{knitr::rmarkdown}
   %\\VignetteEncoding{UTF-8}\n"
@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 
-pacman::p_load(RCurl)
+pacman::p_load(RCurl, openintro)
 ```
 
 En este trabajo vamos a poner en práctica los conceptos aprendidos sobre regresión lineal, regresión múltiple e inferencia.

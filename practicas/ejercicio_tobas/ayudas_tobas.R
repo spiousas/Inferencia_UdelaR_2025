@@ -13,7 +13,7 @@ pacman::p_load(dplyr, readr, ggplot2, osfr, lubridate)
 toba_repo <- osf_retrieve_node("https://osf.io/nxtvk/")
 
 # lista de archivos
-toba_files <- osf_ls_files(toba_paper) 
+toba_files <- osf_ls_files(toba_repo) 
 
 # descargo los deseados
 osf_download(toba_files[c(4:6),], path = "./data/toba_data") 
@@ -91,12 +91,12 @@ library(car)
 
 lm_mixto <- lmer(Duration ~ Age + Gender + Group + (1|ID), 
               data = toba_sleep)
-summary(lm_group)
-confint(lm_group) # 95% CI de los efectos
-Anova(lm_group)
+summary(lm_mixto)
+confint(lm_mixto) # 95% CI de los efectos
+Anova(lm_mixto)
 
 # Contrastes entre grupos
-emmeans::emmeans(lm_group, pairwise~Gender,
+emmeans::emmeans(lm_mixto, pairwise~Group,
                  pbkrtest.limit = 3900,
                  lmerTest.limit = 3900)
 
@@ -137,4 +137,4 @@ modelo_fotoperiodo_2 <- lmer(start_hour ~ Group + year_date + Gender + Age +
 summary(modelo_fotoperiodo_2)
 confint(modelo_fotoperiodo_2)
 Anova(modelo_fotoperiodo_2)
-         
+# Fin         

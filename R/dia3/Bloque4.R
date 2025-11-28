@@ -229,6 +229,7 @@ model_parameters(mountain.lm)
 # Un modelo de efectos mixtos
 mixed.lmer <- lmer(testScore ~ bodyLength + (1|mountainRange), data = dragons)
 summary(mixed.lmer)
+model_parameters(mixed.lmer)
 
 # Los efectos aleatorios
 plot_model(mixed.lmer, type = "re", show.values = TRUE) +
@@ -279,6 +280,7 @@ plot_ranefs[[1]] + theme_bw() + plot_ranefs[[2]] + theme_bw()
 mixed.nested <- lmer(testScore ~ bodyLength + (1|mountainRange) + (1|site:mountainRange), 
                      data = dragons)
 summary(mixed.nested)
+model_parameters(mixed.nested)
 
 # Veamos los efectos aleatorios
 ranef(mixed.nested)

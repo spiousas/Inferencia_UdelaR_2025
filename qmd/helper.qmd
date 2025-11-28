@@ -209,3 +209,36 @@ $$
 $$
 \epsilon_i \sim \mathcal{N}(0, \sigma^2)
 $$
+
+# Cosinor y sus formulitas
+
+$$
+Y(t) = M + Acos(\frac{2\pi t}{\tau} - \phi) + e(t)
+$$
+
+$$
+Y(t) = M + \beta x + \gamma z + e(t)
+$$
+
+$$
+\begin{array}
+>x &=& cos(\frac{2\pi t}{τ}) \\
+z &=&sin(\frac{2\pi t}{τ}) \\
+\beta &=& A cos(\phi)\\
+\gamma &=& A sin(\phi)
+\end{array}
+$$
+
+$$
+\begin{array}
+_ \hat\phi &=& \arctan(\frac{\hat\gamma}{\hat\beta}) \\
+\hat A &=& \sqrt{\hat\beta ^2 + \hat\gamma ^ 2}
+\end{array}
+$$
+
+$$
+\begin{array}
+_\hat{Temp(t)} &=& \hat{M} + \hat{A}cos(\frac{2\pi t}{\tau} - \hat{\phi}) \\
+\hat{Temp(t)} &=& 17.02 + 6.11 \times cos(\frac{2\pi t}{365.25} - 0.46) \\
+\end{array}
+$$

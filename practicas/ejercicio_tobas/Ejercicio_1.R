@@ -5,7 +5,7 @@ pacman::p_load(osfr)
 toba_repo <- osf_retrieve_node("https://osf.io/nxtvk/")
 
 # obtengo la lista de archivos disponibles
-toba_files <- osf_ls_files(toba_paper)
+toba_files <- osf_ls_files(sleep)
 toba_files
 
 # descargo dos archivos con los datos que me importan y otro con la metadata
